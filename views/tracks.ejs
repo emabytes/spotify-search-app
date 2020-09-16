@@ -1,0 +1,16 @@
+<%-include('./partials/head')%>
+
+<section id="artist-tracks">
+    <% trackList.forEach(elt => { %>
+    <figure>
+        <figcaption><%= elt.name %></figcaption>
+        <audio controls src="<%=elt.preview_url%>">
+            Your browser does not support the
+            <code>audio</code> element.
+        </audio>
+    </figure>
+    <% }) %>
+</section>
+</body>
+
+</html>

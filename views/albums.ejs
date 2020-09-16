@@ -1,0 +1,21 @@
+<%-include('./partials/head')%>
+
+<section id="artist-albums">
+    <% albumList.forEach(elt => { %>
+    <article>
+        <% console.log(elt.images) %>
+        <div>
+            <% if(elt.images[0] != undefined){%>
+            <img src="<%= elt.images[0].url%> " alt="">
+            <%} else {%>
+            <img src="empty.png" alt="">
+            <% } %>
+        </div>
+        <h3> <%= elt.name %> </h3>
+        <a class="btn" href="/tracks/<%= elt.id %>">View Tracks</a>
+    </article>
+    <% }) %>
+</section>
+</body>
+
+</html>
